@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отзывы о кальянной</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+            .star-rating {
+              direction: rtl;
+              display: inline-block;
+              font-size: 1.8em;
+            }
+            .star-rating input[type="radio"] {
+              display: none;
+            }
+            .star-rating label {
+                margin-left: 5px;
+              color: #ccc;
+              cursor: pointer;
+              display: inline-block;
+              font-size: 1.6em;
+            }
+            .star-rating input:checked ~ label {
+          color: #00ff00;
+      }
+
+            
+            .star-rating label:hover,
+            .star-rating label:hover ~ label {
+              color: #00ff00;
+            }
+            .required-icon {
+              color: red;
+              margin-left: 5px;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="img/d9ba4a8c-e171-48c9-93b1-7c0876eb286b (2).png"
+          alt="Логотип Кальянной"
+          class="logo"
+        />
+        <h1>Добро пожаловать в PLAYBOX</h1>
+        <p>Насладитесь лучшими кальянами в уютной атмосфере!</p>
+        <div class="photos">
+          <img
+            src="img/2fb74d72-f0d5-413d-a3e8-0339394c0ce9.jpg"
+            alt="Фото заведения 1"
+          />
+          <!-- <img src="img/2fb74d72-f0d5-413d-a3e8-0339394c0ce9.jpg" alt="Фото заведения 2"> -->
+        </div>
+      </header>
+      <section class="reviews">
+        <h2>Оцените наш сервис</h2>
+        <form
+          id="reviewForm"
+          action="https://playbox-kazan.online"
+          method="POST"
+        >
+          <label  for="staff"
+            >Выберите филиал: <span class="required-icon">*</span></label
+          >
+          <select id="staff" name="staff" required>
+            <option value="">Выберите...</option>
+            <option value="Ул.Николая Ершова 78Б">Ул.Николая Ершова 78Б</option>
+            <option value="Ул.Пушкина 17">Ул.Пушкина 17</option>
+            <option value="Ул.Ямашева 92А">Ул.Ямашева 92А</option>
+          </select>
+
+          <label for="visit-date"
+            >Дата посещения: <span class="required-icon">*</span></label
+          >
+          <input type="date" id="visit-date" name="visit-date" required />
+
+          <fieldset>
+            <legend>Качество кальяна: <span class="required-icon">*</span></legend>
+            <div class="star-rating">
+              <input
+                type="radio"
+                id="5-stars"
+                name="shisha-quality"
+                value="5"
+                required
+              />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input
+                type="radio"
+                id="4-stars"
+                name="shisha-quality"
+                value="4"
+                required
+              />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input
+                type="radio"
+                id="3-stars"
+                name="shisha-quality"
+                value="3"
+                required
+              />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input
+                type="radio"
+                id="2-stars"
+                name="shisha-quality"
+                value="2"
+                required
+              />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input
+                type="radio"
+                id="1-star"
+                name="shisha-quality"
+                value="1"
+                required
+              />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
+          </fieldset>
+          
+
+         <fieldset>
+  <legend>Уровень обслуживания: <span class="required-icon">*</span></legend>
+  <div class="star-rating">
+    <input
+      type="radio"
+      id="5-stars-staff"
+      name="staff-quality"
+      value="5"
+      required
+    />
+    <label for="5-stars-staff" class="star">&#9733;</label>
+    <input
+      type="radio"
+      id="4-stars-staff"
+      name="staff-quality"
+      value="4"
+      required
+    />
+    <label for="4-stars-staff" class="star">&#9733;</label>
+    <input
+      type="radio"
+      id="3-stars-staff"
+      name="staff-quality"
+      value="3"
+      required
+    />
+    <label for="3-stars-staff" class="star">&#9733;</label>
+    <input
+      type="radio"
+      id="2-stars-staff"
+      name="staff-quality"
+      value="2"
+      required
+    />
+    <label for="2-stars-staff" class="star">&#9733;</label>
+    <input
+      type="radio"
+      id="1-star-staff"
+      name="staff-quality"
+      value="1"
+      required
+    />
+    <label for="1-star-staff" class="star">&#9733;</label>
+  </div>
+</fieldset>
+
+
+<fieldset>
+    <legend>
+      Состояние игровых контроллеров: <span class="required-icon">*</span>
+    </legend>
+    <div class="star-rating">
+      <input
+        type="radio"
+        id="5-stars-venue"
+        name="venue-quality"
+        value="5"
+        required
+      />
+      <label for="5-stars-venue" class="star">&#9733;</label>
+      <input
+        type="radio"
+        id="4-stars-venue"
+        name="venue-quality"
+        value="4"
+        required
+      />
+      <label for="4-stars-venue" class="star">&#9733;</label>
+      <input
+        type="radio"
+        id="3-stars-venue"
+        name="venue-quality"
+        value="3"
+        required
+      />
+      <label for="3-stars-venue" class="star">&#9733;</label>
+      <input
+        type="radio"
+        id="2-stars-venue"
+        name="venue-quality"
+        value="2"
+        required
+      />
+      <label for="2-stars-venue" class="star">&#9733;</label>
+      <input
+        type="radio"
+        id="1-star-venue"
+        name="venue-quality"
+        value="1"
+        required
+      />
+      <label for="1-star-venue" class="star">&#9733;</label>
+    </div>
+  </fieldset>
+  
+
+          <label for="feedback">Ваши впечатления и пожелания</label>
+          <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+          <button type="submit">Отправить отзыв</button>
+        </form>
+      </section>
+    </div>
+   
+
+    <script src="script.js"></script>
+  </body>
+</html>
