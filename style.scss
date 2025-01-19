@@ -1,0 +1,138 @@
+html,
+body {
+  touch-action: manipulation;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Чёрный фон */
+  color: #fff; /* Белый текст */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #333; /* Темно-серый фон контейнера */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #00ff00; /* Зелёный цвет заголовка */
+}
+h2 {
+  color: #00cc00;
+}
+p {
+  color: #bbb; /* Светло-серый текст */
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.photos img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+.reviews {
+  text-align: left;
+}
+
+h2 {
+  color: #00ff00; /* Зелёный цвет заголовка */
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #00ff00; /* Зелёный цвет текста меток */
+}
+
+input,
+select,
+textarea,
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+input,
+select,
+textarea {
+  background-color: #444; /* Темно-серый фон полей ввода */
+  color: #fff; /* Белый текст полей ввода */
+}
+
+button {
+  background-color: #00ff00; /* Зелёный фон кнопки */
+  color: #000; /* Чёрный текст кнопки */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #009900; /* Темно-зелёный при наведении */
+}
+
+button:disabled {
+  background-color: #666;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  background-color: #555;
+}
+
+select,
+input[type="date"] {
+  pointer-events: auto; /* Убедимся, что элементы могут быть выбраны с помощью мыши */
+  z-index: 10; /* Убедимся, что элементы находятся на переднем плане */
+}
+input[type="date"] {
+  -webkit-appearance: none; /* Убирает стандартный стиль браузера для поля даты */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select,
+input[type="date"] {
+  position: relative;
+  z-index: 10; /* Убедимся, что элементы формы находятся на переднем плане */
+}
